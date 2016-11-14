@@ -27,7 +27,7 @@ public class ReceptorLlamadas extends BroadcastReceiver {
                 String info = estado + " " + numero;
                 Log.d("ReceptorAnuncio", info + " intent=" + intent);
 // Creamos Notificación
-                NotificationCompat.Builder notificacion = new NotificationCompat.Builder(context) .setContentTitle("Llamada entrante ")
+                NotificationCompat.Builder notificacion = new NotificationCompat.Builder(context) .setContentTitle("Esto es una llamada entrante ")
                         .setContentText(info) .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class), 0));
                 ((NotificationManager) context.getSystemService(Context. NOTIFICATION_SERVICE)).notify(1,notificacion.build());
